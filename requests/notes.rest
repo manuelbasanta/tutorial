@@ -1,0 +1,31 @@
+### GET all notes
+GET http://localhost:3001/api/notes
+content-type: application/json
+
+### GET unkown endpoint
+GET http://localhost:3001/api/loks
+content-type: application/json
+
+### GET single note
+GET http://localhost:3001/api/notes/2
+
+
+### DELETE single note
+DELETE http://localhost:3001/api/notes/1
+
+### ADD single note
+POST http://localhost:3001/api/notes/
+content-type: application/json
+
+{
+    "content": "New note",
+    "important": true
+}
+
+### ADD invalid note - Error
+POST http://localhost:3001/api/notes/
+content-type: application/json
+
+{
+    "important": true
+}
