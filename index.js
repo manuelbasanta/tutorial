@@ -2,7 +2,7 @@ const express = require('express')
 const { requestLogger, unknownEndpoint } = require('./middlewares')
 const cors = require('cors')
 const app = express()
-app.use(cors)
+app.use(cors())
 app.use(express.json())
 app.use(requestLogger)
 let notes = [
@@ -77,6 +77,7 @@ app.delete('/api/notes/:id', (req, res) => {
 app.use(unknownEndpoint)
 
 const PORT = process.env.PORT || 3001
+console.log(PORT)
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
