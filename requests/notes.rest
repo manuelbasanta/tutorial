@@ -7,18 +7,18 @@ GET http://localhost:3001/api/loks
 content-type: application/json
 
 ### GET single note
-GET http://localhost:3001/api/notes/2
+GET http://localhost:3001/api/notes/6575d986bf8cc01f1ded7289
 
 
 ### DELETE single note
-DELETE http://localhost:3001/api/notes/1
+DELETE http://localhost:3001/api/notes/65748bb94bd663f649098115
 
 ### ADD single note
 POST http://localhost:3001/api/notes/
 content-type: application/json
 
 {
-    "content": "New note",
+    "content": "MOngo note",
     "important": true
 }
 
@@ -27,5 +27,14 @@ POST http://localhost:3001/api/notes/
 content-type: application/json
 
 {
+    "important": true
+}
+
+### Modify note
+PUT  http://localhost:3001/api/notes/6575d986bf8cc01f1ded7289
+content-type: application/json
+
+{
+    "content": "CHANGED!!!",
     "important": true
 }
