@@ -16,9 +16,10 @@ DELETE http://localhost:3001/api/notes/65748bb94bd663f649098115
 ### ADD single note
 POST http://localhost:3001/api/notes/
 content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbyIsImlkIjoiNjU5NDJhMTBhNjcxNDQ5NmUxNmQ3YTUwIiwiaWF0IjoxNzA0MjkyMjA3fQ.81CSG5MjXHk2fz5ZnviV7KtN4GwLmy_bkQIl7_okgA8
 
 {
-    "content": "MOngo note",
+    "content": "JWT new!!",
     "important": true
 }
 
